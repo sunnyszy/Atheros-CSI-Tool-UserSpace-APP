@@ -46,10 +46,10 @@ int bit_convert(int data, int maxbit)
     return data;
 }
 
-void fill_csi_matrix(u_int8_t* csi_addr, int nr, int nc, int num_tones, COMPLEX(* csi_matrix)[3][114]){
-    u_int8_t k;
-    u_int8_t bits_left, nr_idx, nc_idx;
-    u_int32_t bitmask, idx, current_data, h_data, h_idx;
+void fill_csi_matrix(uint8_t* csi_addr, int nr, int nc, int num_tones, COMPLEX(* csi_matrix)[3][114]){
+    uint8_t k;
+    uint8_t bits_left, nr_idx, nc_idx;
+    uint32_t bitmask, idx, current_data, h_data, h_idx;
     int real,imag;
     /* init bits_left
      * we process 16 bits at a time*/
@@ -179,8 +179,8 @@ void record_status(unsigned char* buf_addr, int cnt, csi_struct* csi_status){
 void record_csi_payload(unsigned char* buf_addr, csi_struct* csi_status, unsigned char* data_buf, COMPLEX(* csi_matrix)[3][114]){
     int i;
     int nr,nc,num_tones;
-    u_int8_t* csi_addr;
-    u_int16_t payload_len, csi_len;
+    uint8_t* csi_addr;
+    uint16_t payload_len, csi_len;
 
     nr          = csi_status->nr;
     nc          = csi_status->nc;

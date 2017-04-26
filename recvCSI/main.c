@@ -51,7 +51,7 @@ int main(int argc, char* argv[])
     int         total_msg_cnt,cnt;
     int         log_flag;
     unsigned char endian_flag;
-    u_int16_t   buf_len;
+    uint16_t   buf_len;
     
     log_flag = 1;
     csi_status = (csi_struct*)malloc(sizeof(csi_struct));
